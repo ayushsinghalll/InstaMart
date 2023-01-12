@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUSComponent } from './about-us/about-us.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
-import { ContactComponent } from './contact/contact.component';
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
@@ -17,6 +16,8 @@ import {IconModule} from "@coreui/icons-angular";
 import {MatCardModule} from "@angular/material/card";
 import {MatSelectModule} from "@angular/material/select";
 import { LoginComponent } from './login/login.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import {ContactComponent} from "./contact/contact.component";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { LoginComponent } from './login/login.component';
     ContactComponent,
     NavbarComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    PagenotfoundComponent,
+
   ],
   imports: [
     BrowserModule,

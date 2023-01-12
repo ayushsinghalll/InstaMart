@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
+import {MatDialog} from "@angular/material/dialog";
 interface Store {
   name: string;
 }
@@ -32,4 +33,6 @@ export class ContactComponent {
     {name: 'New Delhi'},
     {name: 'Pune'},
   ];
+
 }
+
