@@ -1,0 +1,42 @@
+<c-carousel  [interval]="4000" transition="slide">
+  <c-carousel-inner>
+    <c-carousel-item *ngFor="let slide of slides">
+      <img
+        [src]="slide.src"
+        alt="{{slide.title}}"
+        class="d-block w-100 p-4"
+        loading="lazy"
+        width="100px"
+        height="400px"
+      />
+    </c-carousel-item>
+  </c-carousel-inner>
+</c-carousel>
+  <div class="container">
+    <div class="row" >
+      <div class="col-md-3" *ngFor="let card of cards">
+      <mat-card class="example-card" >
+        <mat-card-title class="heading">{{card.heading}}</mat-card-title>
+          <img mat-card-image class="center" [src]="card.src" width="186" height="116" alt="fashion">
+    </mat-card>
+      </div>
+<!--      <div class="col-md-3">-->
+<!--        <mat-card class="example-card">-->
+<!--          <mat-card-title class="heading">Electronics</mat-card-title>-->
+<!--          <img mat-card-image class="center" src="assets/images/electronics.jpg" width="186" height="116" alt="electronic">-->
+<!--        </mat-card>-->
+<!--      </div>-->
+<!--      <div class="col-md-3">-->
+<!--        <mat-card class="example-card">-->
+<!--          <mat-card-title class="heading">Grocery</mat-card-title>-->
+<!--          <img mat-card-image class="center" src="assets/images/grocery.jpg" width="186" height="116" alt="grocery">-->
+<!--        </mat-card>-->
+<!--      </div>-->
+<!--      <div class="col-md-3">-->
+<!--        <mat-card class="example-card">-->
+<!--          <mat-card-title class="heading">Mobile</mat-card-title>-->
+<!--          <img mat-card-image class="center" src="assets/images/mobile.jpg" width="186" height="116" alt="mobile">-->
+<!--        </mat-card>-->
+<!--      </div>-->
+    </div>
+  </div>
