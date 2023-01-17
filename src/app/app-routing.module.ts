@@ -5,6 +5,8 @@ import {AboutUSComponent} from "./about-us/about-us.component";
 import {ContactComponent} from "./contact/contact.component";
 import {LoginComponent} from "./login/login.component";
 import {PagenotfoundComponent} from "./pagenotfound/pagenotfound.component";
+import {AuthGuard} from "./login/auth-guard";
+import {CartComponent} from "./cart/cart.component";
 
 const routes: Routes = [
   //home component route
@@ -15,6 +17,9 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
   // login component route
   {path:'login',component:LoginComponent},
+  {path:'cart',component:CartComponent},
+  {path:'product',
+  loadChildren:()=>import('./admin/admin.module').then((m)=>m.AdminModule),canActivate:[AuthGuard]},
   //page not found route
   {path:'**',component:PagenotfoundComponent}
 
