@@ -5,6 +5,8 @@ import { getTestBed, inject, TestBed } from "@angular/core/testing";
 import { of } from "rxjs";
 
 import { ProductService } from "./product.service"
+import {FormsModule} from "@angular/forms";
+import {Store, StoreModule} from "@ngrx/store";
 
 describe('ProductService',()=>{
   let service:ProductService;
@@ -19,7 +21,8 @@ describe('ProductService',()=>{
   });
   beforeEach(()=>{
     TestBed.configureTestingModule({
-      imports:[HttpClientTestingModule],
+      imports:[HttpClientTestingModule,
+      FormsModule, StoreModule.forRoot({})],
       providers:[ProductService],
     });
     service=TestBed.get(ProductService);
