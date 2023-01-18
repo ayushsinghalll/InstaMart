@@ -28,6 +28,8 @@ import {AppEffects} from "./app.effects";
 import { CartComponent } from './cart/cart.component';
 import {FilterPipe} from "./service/filter.pipe";
 import {AdminModule} from "./admin/admin.module";
+import { CheckoutComponent } from './checkout/checkout.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import {AdminModule} from "./admin/admin.module";
     PagenotfoundComponent,
     CartComponent,
     FilterPipe,
+    CheckoutComponent,
 
   ],
   imports: [
@@ -63,9 +66,10 @@ import {AdminModule} from "./admin/admin.module";
     EffectsModule.forRoot([AppEffects]),
     StoreDevtoolsModule.instrument(),
     AdminModule,
+    MatSnackBarModule,
 
   ],
-  providers: [],
+  providers: [MatSnackBarModule,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

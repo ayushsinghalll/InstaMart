@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AboutUSComponent } from './about-us.component';
+import {AppComponent} from "../app.component";
 
 describe('AboutUSComponent', () => {
   let component: AboutUSComponent;
@@ -19,5 +20,10 @@ describe('AboutUSComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it(`should have as title 'About us`, () => {
+    const fixture = TestBed.createComponent(AboutUSComponent);
+    const app = fixture.componentInstance;
+    expect(app.pageTitle).toEqual('About Us');
   });
 });

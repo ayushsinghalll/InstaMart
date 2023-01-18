@@ -8,9 +8,9 @@ export const productReducer = createReducer(
 
   initialState,
 
-  on(addProduct,(state,{name,price,imageURL})=>({
+  on(addProduct,(state,{name,price,imageURL,description,category})=>({
     ...state,
-    products:[...state.products,{id:Date.now().toString(),name:name,price:price,imageURL:imageURL}],
+    products:[...state.products,{id:Date.now().toString(),name:name,price:price,imageURL:imageURL,description:description,category:category}],
   })),
 
   on(deleteProduct,(state,{id})=>({

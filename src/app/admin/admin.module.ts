@@ -9,7 +9,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {StoreModule} from "@ngrx/store";
 import {EffectsModule} from "@ngrx/effects";
 import {ProductEffects} from "../state/product/product.effects";
-import {productReducer} from '../state/product/product.reducer'
+import {productReducer} from '../state/product/product.reducer';
+import { DialogComponent } from './dialog/dialog.component'
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
+import {MatIconModule} from "@angular/material/icon";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -17,7 +23,8 @@ import {productReducer} from '../state/product/product.reducer'
     ProductComponent,
     ProductAddComponent,
     ProductListComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    DialogComponent
   ],
   exports: [
     ProductListComponent
@@ -28,7 +35,12 @@ import {productReducer} from '../state/product/product.reducer'
     FormsModule,
     StoreModule.forFeature('products', productReducer),
     EffectsModule.forFeature(ProductEffects),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatIconModule,
+    MatSnackBarModule,
+    MatDialogModule,
   ]
 })
 export class AdminModule { }

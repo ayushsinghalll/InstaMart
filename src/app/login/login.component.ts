@@ -25,7 +25,6 @@ export class LoginComponent {
       const password=loginForm.form.value.password;
       //this user is logged in
       this.authService.validateUser({userName,password},this.users);
-      console.log('after login  ')
       if(this.authService.redirectToUrl){
         this.router.navigateByUrl(this.authService.redirectToUrl);
       }

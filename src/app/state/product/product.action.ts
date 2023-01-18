@@ -4,7 +4,7 @@ import {ProductModel} from "../../admin/product.model";
 
 export const addProduct = createAction(
   '[Product Page] Add Product',
-  props<{name:string,price:number,imageURL:string}>()
+  props<{name:string,price:number,imageURL:string,description:string,category:string}>()
 )
 
 export const deleteProduct = createAction(
