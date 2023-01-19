@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {AuthService} from "./authservice";
 import {Router} from "@angular/router";
-import {NgForm} from "@angular/forms";
+import {FormGroup, NgForm} from "@angular/forms";
 import {User} from "./user";
 
 @Component({
@@ -10,6 +10,7 @@ import {User} from "./user";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  loginForm!: FormGroup;
   users:User[]=[];
   pageTitle:string='Log In';
   constructor(private authService:AuthService,private router:Router) { }
