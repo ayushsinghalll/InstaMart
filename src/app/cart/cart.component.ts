@@ -30,4 +30,7 @@ export class CartComponent implements OnInit {
   }
 
 
+  hasCart() {
+    return this.cartService.cartItemList.length>0
+  }
 }
